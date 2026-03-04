@@ -1,14 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [HomeController::class, 'index']);
+
+use App\Http\Controllers\ProductController;
+
+Route::get('/products', [ProductController::class, 'list']);
+
+Route::get('/lienhe', function () {
+    return view('lienhe');
 });
 
-Route::get('/home', function () {
-    return "Chào mừng đến với Laravel";
-});
+Route::get('/bang-cuu-chuong/{n}', [HomeController::class, 'multiplication']);
 
 Route::get('/about', function () {
     return "Họ tên: Diêm Việt Anh - Lớp: D18CNPM2 - MSSV: 23810310083";

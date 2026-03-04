@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head><title>Trang Liên Hệ</title></head>
+<head>
+    <title>Contact</title>
+</head>
 <body>
-    <h1>Đây là trang Liên Hệ</h1>
-    <p>Email: hotro@sinhvien.edu.vn</p>
+    <h1>Xin chào {{ $name }}, {{ $age }} tuổi</h1>
+    <p>Trường: {{ $school }}</p>
 </body>
 </html>
